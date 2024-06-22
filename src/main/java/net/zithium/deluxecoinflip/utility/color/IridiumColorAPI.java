@@ -1,12 +1,12 @@
 package net.zithium.deluxecoinflip.utility.color;
 
+import net.md_5.bungee.api.ChatColor;
 import net.zithium.deluxecoinflip.utility.color.patterns.GradientPattern;
 import net.zithium.deluxecoinflip.utility.color.patterns.Pattern;
 import net.zithium.deluxecoinflip.utility.color.patterns.RainbowPattern;
 import net.zithium.deluxecoinflip.utility.color.patterns.SolidPattern;
-import net.md_5.bungee.api.ChatColor;
 
-import java.awt.Color;
+import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;

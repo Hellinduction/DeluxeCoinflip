@@ -5,10 +5,10 @@
 
 package net.zithium.deluxecoinflip.hook;
 
+import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import net.zithium.deluxecoinflip.DeluxeCoinflipPlugin;
 import net.zithium.deluxecoinflip.storage.PlayerData;
 import net.zithium.deluxecoinflip.storage.StorageManager;
-import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 

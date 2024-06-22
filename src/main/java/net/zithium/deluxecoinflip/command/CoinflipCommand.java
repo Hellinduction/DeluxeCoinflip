@@ -9,6 +9,7 @@ import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.*;
 import net.zithium.deluxecoinflip.DeluxeCoinflipPlugin;
 import net.zithium.deluxecoinflip.api.events.CoinflipCreatedEvent;
+import net.zithium.deluxecoinflip.api.events.CoinflipRemovedEvent;
 import net.zithium.deluxecoinflip.config.ConfigType;
 import net.zithium.deluxecoinflip.config.Messages;
 import net.zithium.deluxecoinflip.economy.EconomyManager;
@@ -117,6 +118,9 @@ public class CoinflipCommand extends BaseCommand {
         UUID uuid = player.getUniqueId();
         if (gameManager.getCoinflipGames().containsKey(uuid)) {
             final CoinflipGame game = gameManager.getCoinflipGames().get(uuid);
+            final CoinflipRemovedEvent event = new CoinflipRemovedEvent(player, game);
+
+            Bukkit.getPluginManager().callEvent(event);
 
             economyManager.getEconomyProvider(game.getProvider()).deposit(player, game.getAmount());
             gameManager.removeCoinflipGame(uuid);
